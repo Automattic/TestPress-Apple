@@ -2,11 +2,30 @@
 
 default_platform :ios
 
+# It's necessary to be explicit with the DerivedData folder because that's
+# where the xctestrun file will go.
+PROJECT_ROOT_FOLDER = File.dirname(File.expand_path(__dir__))
+DERIVED_DATA_PATH = File.join(PROJECT_ROOT_FOLDER, 'DerivedData')
+
 platform :ios do
-  lane :test do
+  lane :build_for_testing do
     run_tests(
       project: 'TestPress.xcodeproj',
-      scheme: 'TestPress'
+      scheme: 'TestPress',
+      build_for_testing: true,
+      derived_data_path: DERIVED_DATA_PATH
+    )
+  end
+
+  lane :test_without_building do
+    # TODO: This should be computed, not hardcoded
+    xctestrun_path = File.join(DERIVED_DATA_PATH, 'Build/Products/TestPress_iphonesimulator15.5-x86_64.xctestrun')
+
+    run_tests(
+      project: 'TestPress.xcodeproj',
+      scheme: 'TestPress',
+      test_without_building: true,
+      xctestrun: xctestrun_path
     )
   end
 end
