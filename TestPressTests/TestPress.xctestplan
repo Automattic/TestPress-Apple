@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "AE4C3283-B800-48AA-9952-6ADE39BB0A01",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TestPress.xcodeproj",
+      "identifier" : "3F55172C2861780B002CF097",
+      "name" : "TestPressTests"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TestPress.xcodeproj",
+        "identifier" : "3F55172C2861780B002CF097",
+        "name" : "TestPressTests"
+      }
+    }
+  ],
+  "version" : 1
+}
