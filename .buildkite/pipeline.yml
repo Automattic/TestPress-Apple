@@ -16,10 +16,10 @@ common_params:
     IMAGE_ID: xcode-13.4.1
 
 steps:
-  - label: "Build and test"
+  - label: Build and test
     # Notice we _need_ to use a script because of how our CI & VMs management
     # layer currently manages environment variables (which is how we make the
     # Test Analytics token available to the uploader)
-    command: ".buildkite/commands/build-and-test.sh"
+    command: .buildkite/commands/build-and-test.sh
     env: *common_env
     plugins: *common_plugins
