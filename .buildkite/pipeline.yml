@@ -1,0 +1,17 @@
+# Nodes with values to reuse in the pipeline.
+common_params:
+  # Common plugin settings to use with the `plugins` key.
+  - &common_plugins
+    - automattic/bash-cache#2.2.0
+    - automattic/git-s3-cache#v1.1.0:
+        bucket: "a8c-repo-mirrors"
+        repo: "Automattic/TestPress-Apple/"
+  # Common environment values to use with the `env` key.
+  - &common_env
+    IMAGE_ID: xcode-13.4.1
+
+steps:
+  - label: "Build and test"
+    command: ".buildkite/commands/build-and-test.sh"
+    env: *common_env
+    plugins: *common_plugins
