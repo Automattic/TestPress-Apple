@@ -19,12 +19,5 @@ fi
 echo "--- :hammer_and_wrench: Building for testing"
 bundle exec fastlane build_for_testing
 
-echo "--- Hack to pass token to the xctestrun"
-# TODO: In real life, the env var name, value, and xctestrun path should be
-# parameters read or injected from somewhere
-/usr/libexec/PlistBuddy -c \
-  "add TestPressTests:EnvironmentVariables:BUILDKITE_ANALYTICS_TOKEN string $BUILDKITE_ANALYTICS_TOKEN" \
-  ./DerivedData/Build/Products/TestPress_iphonesimulator15.5-x86_64.xctestrun
-
 echo "--- :microscope: Running unit tests"
 bundle exec fastlane test_without_building
