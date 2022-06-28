@@ -28,19 +28,4 @@ platform :ios do
       xctestrun: xctestrun_path
     )
   end
-
-  def add_buildkite_analytics_token(xctestrun_path:)
-    token_key = 'BUILDKITE_ANALYTICS_TOKEN'
-    token = ENV[token_key]
-    return if token.nil?
-
-    xctestrun = Plist.parse_xml(xctestrun_path)
-    xctestrun['TestConfigurations'].each do |configuration|
-      configuration['TestTargets'].each do |target|
-        target['EnvironmentVariables'][token_key] = token
-      end
-    end
-
-    File.write(xctestrun_path, Plist::Emit.dump(xctestrun))
-  end
 end
