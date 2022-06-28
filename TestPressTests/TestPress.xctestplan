@@ -10,6 +10,12 @@
   ],
   "defaultOptions" : {
     "codeCoverage" : false,
+    "environmentVariableEntries" : [
+      {
+        "key" : "BUILDKITE_ANALYTICS_TOKEN",
+        "value" : "$(BUILDKITE_ANALYTICS_TOKEN)"
+      }
+    ],
     "targetForVariableExpansion" : {
       "containerPath" : "container:TestPress.xcodeproj",
       "identifier" : "3F55172C2861780B002CF097",
