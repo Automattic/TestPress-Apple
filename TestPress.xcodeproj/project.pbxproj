@@ -185,6 +185,9 @@
 				3F5517392861780B002CF097 /* PBXTargetDependency */,
 			);
 			name = TestPressUITests;
+			packageProductDependencies = (
+				3F55174B286186A8002CF097 /* BuildkiteTestCollector */,
+			);
 			productName = TestPressUITests;
 			productReference = 3F5517372861780B002CF097 /* TestPressUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
