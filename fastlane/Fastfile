@@ -8,22 +8,24 @@ PROJECT_ROOT_FOLDER = File.dirname(File.expand_path(__dir__))
 DERIVED_DATA_PATH = File.join(PROJECT_ROOT_FOLDER, 'DerivedData')
 
 platform :ios do
-  lane :build_for_testing do
+  lane :build_for_testing do |options|
     run_tests(
       project: 'TestPress.xcodeproj',
-      scheme: 'TestPress',
+      scheme: options[:scheme],
       build_for_testing: true,
       derived_data_path: DERIVED_DATA_PATH
     )
   end
 
-  lane :test_without_building do
-    # TODO: This should be computed, not hardcoded
-    xctestrun_path = File.join(DERIVED_DATA_PATH, 'Build/Products/TestPress_TestPress_iphonesimulator15.5-x86_64.xctestrun')
+  lane :test_without_building do |options|
+    # In the context of how this demo codebase works, it's enough for us to use
+    # the first `.xctestrun` we find, because there's always going to be just
+    # one.
+    xctestrun_path = Dir.glob(File.join(DERIVED_DATA_PATH, 'Build', 'Products', '*.xctestrun')).first
 
     run_tests(
       project: 'TestPress.xcodeproj',
-      scheme: 'TestPress',
+      scheme: options[:scheme],
       test_without_building: true,
       xctestrun: xctestrun_path
     )
