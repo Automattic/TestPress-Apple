@@ -7,8 +7,8 @@ gem install bundler
 echo "--- :rubygems: Setting up Gems"
 install_gems
 
-echo "--- Verify BUILDKITE_ANALYTICS_TOKEN"
-if [ -z "$BUILDKITE_ANALYTICS_TOKEN" ]; then
+echo "--- :test-analytics: Verify BUILDKITE_ANALYTICS_TOKEN"
+if [ -z "$BUILDKITE_ANALYTICS_TOKEN_UNIT_TESTS" ]; then
   # This should not run because of the `-u` in the shebang, but just in case...
   echo "+++ Token not available!"
   exit 1
