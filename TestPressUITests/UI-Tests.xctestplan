@@ -21,11 +21,11 @@
       },
       {
         "key" : "BUILDKITE_ANALYTICS_NUMBER",
-        "value" : "$(BUILDKITE_ANALYTICS_NUMBER)"
+        "value" : "$(BUILDKITE_BUILD_NUMBER)"
       },
       {
         "key" : "BUILDKITE_ANALYTICS_URL",
-        "value" : "$(BUILDKITE_ANALYTICS_URL)"
+        "value" : "$(BUILDKITE_BUILD_URL)"
       },
       {
         "key" : "BUILDKITE_BRANCH",
