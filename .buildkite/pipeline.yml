@@ -18,15 +18,6 @@ common_params:
     queue: mac
 
 steps:
-  - label: Unit Test
-    # Notice we _need_ to use a script because of how our CI & VMs management
-    # layer currently manages environment variables (which is how we make the
-    # Test Analytics token available to the uploader)
-    command: .buildkite/commands/build-and-test.sh
-    env: *common_env
-    plugins: *common_plugins
-    agents: *common_agents
-
   - label: UI Test (iPhone)
     # Notice we _need_ to use a script because of how our CI & VMs management
     # layer currently manages environment variables (which is how we make the
