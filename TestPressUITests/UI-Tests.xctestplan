@@ -1,0 +1,63 @@
+{
+  "configurations" : [
+    {
+      "id" : "166D42E6-EFAE-4895-81E5-B3042E71C048",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "environmentVariableEntries" : [
+      {
+        "key" : "BUILDKITE_ANALYTICS_TOKEN",
+        "value" : "$(BUILDKITE_ANALYTICS_TOKEN_UI_TESTS)"
+      },
+      {
+        "key" : "BUILDKITE_BRANCH",
+        "value" : "$(BUILDKITE_BRANCH)"
+      },
+      {
+        "key" : "BUILDKITE_BUILD_ID",
+        "value" : "$(BUILDKITE_BUILD_ID)"
+      },
+      {
+        "key" : "BUILDKITE_BUILD_NUMBER",
+        "value" : "$(BUILDKITE_BUILD_NUMBER)"
+      },
+      {
+        "key" : "BUILDKITE_BUILD_URL",
+        "value" : "$(BUILDKITE_BUILD_URL)"
+      },
+      {
+        "key" : "BUILDKITE_COMMIT",
+        "value" : "$(BUILDKITE_COMMIT)"
+      },
+      {
+        "key" : "BUILDKITE_JOB_ID",
+        "value" : "$(BUILDKITE_JOB_ID)"
+      },
+      {
+        "key" : "BUILDKITE_MESSAGE",
+        "value" : "$(BUILDKITE_MESSAGE)"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TestPress.xcodeproj",
+      "identifier" : "3F55171C2861780A002CF097",
+      "name" : "TestPress"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TestPress.xcodeproj",
+        "identifier" : "3F5517362861780B002CF097",
+        "name" : "TestPressUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
