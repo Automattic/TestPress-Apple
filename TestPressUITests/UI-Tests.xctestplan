@@ -20,6 +20,14 @@
         "value" : "1"
       },
       {
+        "key" : "BUILDKITE_ANALYTICS_NUMBER",
+        "value" : "$(BUILDKITE_ANALYTICS_NUMBER)"
+      },
+      {
+        "key" : "BUILDKITE_ANALYTICS_URL",
+        "value" : "$(BUILDKITE_ANALYTICS_URL)"
+      },
+      {
         "key" : "BUILDKITE_BRANCH",
         "value" : "$(BUILDKITE_BRANCH)"
       },
