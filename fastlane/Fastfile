@@ -25,7 +25,8 @@ platform :ios do
       project: 'TestPress.xcodeproj',
       scheme: 'TestPress',
       test_without_building: true,
-      xctestrun: xctestrun_path
+      xctestrun: xctestrun_path,
+      output_style: 'raw'
     )
   end
 end
