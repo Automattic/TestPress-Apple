@@ -20,26 +20,6 @@
         "value" : "$(BUILDKITE_ANALYTICS_TOKEN)"
       },
       {
-        "key" : "BUILDKITE_ANALYTICS_BRANCH",
-        "value" : "$(BUILDKITE_ANALYTICS_BRANCH)"
-      },
-      {
-        "key" : "BUILDKITE_ANALYTICS_JOB_ID",
-        "value" : "$(BUILDKITE_ANALYTICS_JOB_ID)"
-      },
-      {
-        "key" : "BUILDKITE_ANALYTICS_NUMBER",
-        "value" : "$(BUILDKITE_ANALYTICS_NUMBER)"
-      },
-      {
-        "key" : "BUILDKITE_ANALYTICS_SHA",
-        "value" : "$(BUILDKITE_ANALYTICS_SHA)"
-      },
-      {
-        "key" : "BUILDKITE_ANALYTICS_URL",
-        "value" : "$(BUILDKITE_ANALYTICS_URL)"
-      },
-      {
         "key" : "BUILDKITE_BRANCH",
         "value" : "$(BUILDKITE_BRANCH)"
       },
