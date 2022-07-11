@@ -587,10 +587,10 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		3F55174A286186A8002CF097 /* XCRemoteSwiftPackageReference "test-collector-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/buildkite/test-collector-swift";
+			repositoryURL = "https://github.com/JamesW-iOS/test-collector-swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				branch = "Add-network-logging";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
