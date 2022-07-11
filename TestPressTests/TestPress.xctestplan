@@ -50,8 +50,8 @@
     ],
     "targetForVariableExpansion" : {
       "containerPath" : "container:TestPress.xcodeproj",
-      "identifier" : "3F55172C2861780B002CF097",
-      "name" : "TestPressTests"
+      "identifier" : "3F55171C2861780A002CF097",
+      "name" : "TestPress"
     }
   },
   "testTargets" : [
