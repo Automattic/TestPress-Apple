@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "AE4C3283-B800-48AA-9952-6ADE39BB0A01",
+      "id" : "166D42E6-EFAE-4895-81E5-B3042E71C048",
       "name" : "Configuration 1",
       "options" : {
 
@@ -13,7 +13,11 @@
     "environmentVariableEntries" : [
       {
         "key" : "BUILDKITE_ANALYTICS_TOKEN",
-        "value" : "$(BUILDKITE_ANALYTICS_TOKEN_UNIT_TESTS)"
+        "value" : "$(BUILDKITE_ANALYTICS_TOKEN_UI_TESTS_IPHONE)"
+      },
+      {
+        "key" : "BUILDKITE_ANALYTICS_DEBUG_ENABLED",
+        "value" : "1"
       },
       {
         "key" : "BUILDKITE_BRANCH",
@@ -46,16 +50,16 @@
     ],
     "targetForVariableExpansion" : {
       "containerPath" : "container:TestPress.xcodeproj",
-      "identifier" : "3F55172C2861780B002CF097",
-      "name" : "TestPressTests"
+      "identifier" : "3F55171C2861780A002CF097",
+      "name" : "TestPress"
     }
   },
   "testTargets" : [
     {
       "target" : {
         "containerPath" : "container:TestPress.xcodeproj",
-        "identifier" : "3F55172C2861780B002CF097",
-        "name" : "TestPressTests"
+        "identifier" : "3F5517362861780B002CF097",
+        "name" : "TestPressUITests"
       }
     }
   ],
