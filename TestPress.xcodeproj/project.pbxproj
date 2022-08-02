@@ -43,7 +43,7 @@
 		3F5517312861780B002CF097 /* TestPressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPressTests.swift; sourceTree = "<group>"; };
 		3F5517372861780B002CF097 /* TestPressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F55173B2861780B002CF097 /* TestPressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPressUITests.swift; sourceTree = "<group>"; };
-		3F55174D2861DECC002CF097 /* TestPress.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPress.xctestplan; sourceTree = "<group>"; };
+		3F55174D2861DECC002CF097 /* Unit-Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Unit-Tests.xctestplan"; sourceTree = "<group>"; };
 		3FC58C4D2877DA1700CBFDD9 /* UI-Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "UI-Tests.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5517312861780B002CF097 /* TestPressTests.swift */,
-				3F55174D2861DECC002CF097 /* TestPress.xctestplan */,
+				3F55174D2861DECC002CF097 /* Unit-Tests.xctestplan */,
 			);
 			path = TestPressTests;
 			sourceTree = "<group>";
