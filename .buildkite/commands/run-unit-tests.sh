@@ -1,5 +1,11 @@
 #!/bin/bash -eu
 
+SCHEME=TestPress
+
+echo "--- 📦 Downloading Build Artifacts"
+download_artifact build-products.tar
+tar -xf build-products.tar
+
 # Workaround for https://github.com/Automattic/buildkite-ci/issues/79
 echo "--- :rubygems: Fixing Ruby Setup"
 gem install bundler
@@ -16,10 +22,5 @@ else
   echo "+++ Test Analytics token found, moving on"
 fi
 
-SCHEME=TestPress
-
-echo "--- :hammer_and_wrench: Building for testing"
-bundle exec fastlane build_for_testing scheme:$SCHEME
-
 echo "--- :microscope: Running unit tests"
-bundle exec fastlane test_without_building scheme:$SCHEME
+bundle exec fastlane test_without_building scheme:"$SCHEME"
