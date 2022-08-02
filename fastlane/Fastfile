@@ -2,30 +2,33 @@
 
 default_platform :ios
 
+TEST_SCHEME = 'TestPress-BuildForTesting'
+
 # It's necessary to be explicit with the DerivedData folder because that's
 # where the xctestrun file will go.
 PROJECT_ROOT_FOLDER = File.dirname(File.expand_path(__dir__))
 DERIVED_DATA_PATH = File.join(PROJECT_ROOT_FOLDER, 'DerivedData')
 
 platform :ios do
-  lane :build_for_testing do |options|
+  lane :build_for_testing do
     run_tests(
       project: 'TestPress.xcodeproj',
-      scheme: options[:scheme],
+      scheme: TEST_SCHEME,
       build_for_testing: true,
       derived_data_path: DERIVED_DATA_PATH
     )
   end
 
   lane :test_without_building do |options|
-    # In the context of how this demo codebase works, it's enough for us to use
-    # the first `.xctestrun` we find, because there's always going to be just
-    # one.
-    xctestrun_path = Dir.glob(File.join(DERIVED_DATA_PATH, 'Build', 'Products', '*.xctestrun')).first
+    test_plan_name = options[:test_plan_name]
+
+    xctestrun_path = Dir.glob(File.join(DERIVED_DATA_PATH, 'Build', 'Products', '*.xctestrun'))
+                        .select { |path| path.include?(test_plan_name) }
+                        .first
 
     run_tests(
       project: 'TestPress.xcodeproj',
-      scheme: options[:scheme],
+      scheme: TEST_SCHEME,
       test_without_building: true,
       output_style: 'raw',
       xctestrun: xctestrun_path

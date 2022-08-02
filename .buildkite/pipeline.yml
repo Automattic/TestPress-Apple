@@ -18,11 +18,19 @@ common_params:
     queue: mac
 
 steps:
+  - label: Build for Testing
+    key: build
+    command: .buildkite/commands/build-for-testing.sh TestPress
+    env: *common_env
+    plugins: *common_plugins
+    agents: *common_agents
+
   - label: Unit Test
     # Notice we _need_ to use a script because of how our CI & VMs management
     # layer currently manages environment variables (which is how we make the
     # Test Analytics token available to the uploader)
-    command: .buildkite/commands/build-and-test.sh
+    command: .buildkite/commands/run-unit-tests.sh
+    depends_on: build
     env: *common_env
     plugins: *common_plugins
     agents: *common_agents
@@ -31,7 +39,8 @@ steps:
     # Notice we _need_ to use a script because of how our CI & VMs management
     # layer currently manages environment variables (which is how we make the
     # Test Analytics token available to the uploader)
-    command: .buildkite/commands/build-and-ui-test.sh
+    command: .buildkite/commands/run-ui-tests.sh
+    depends_on: build
     env: *common_env
     plugins: *common_plugins
     agents: *common_agents
