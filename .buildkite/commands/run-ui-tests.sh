@@ -1,7 +1,5 @@
 #!/bin/bash -eu
 
-SCHEME=TestPress-UI-Tests
-
 echo "--- 📦 Downloading Build Artifacts"
 download_artifact build-products.tar
 tar -xf build-products.tar
@@ -23,4 +21,4 @@ else
 fi
 
 echo "--- :microscope: Running UI tests"
-bundle exec fastlane test_without_building scheme:"$SCHEME"
+bundle exec fastlane test_without_building test_plan_name:UI-Tests
