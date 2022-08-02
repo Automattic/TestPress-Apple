@@ -594,8 +594,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/buildkite/test-collector-swift";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
