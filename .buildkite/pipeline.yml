@@ -2,7 +2,7 @@
 common_params:
   # Common plugin settings to use with the `plugins` key.
   - &common_plugins
-    - automattic/bash-cache#2.2.0
+    - automattic/a8c-ci-toolkit#2.15.0
     # We might want to enable this at some point, but it requires some extra
     # setup (maybe generating the cache first?)
     #
