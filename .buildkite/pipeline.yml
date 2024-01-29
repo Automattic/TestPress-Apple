@@ -3,17 +3,8 @@ common_params:
   # Common plugin settings to use with the `plugins` key.
   - &common_plugins
     - automattic/a8c-ci-toolkit#2.15.0
-    # We might want to enable this at some point, but it requires some extra
-    # setup (maybe generating the cache first?)
-    #
-    # See failure at:
-    # https://buildkite.com/automattic/testpress-apple/builds/1#01818478-f45d-4dea-b629-e3bfb1ef6a57
-    #
-    # - automattic/git-s3-cache#v1.1.0:
-    #     bucket: "a8c-repo-mirrors"
-    #     repo: "Automattic/TestPress-Apple/"
   - &common_env
-    IMAGE_ID: xcode-13.4.1
+    IMAGE_ID: xcode-15.2
   - &common_agents
     queue: mac
 
